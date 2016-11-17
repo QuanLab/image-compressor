@@ -2,22 +2,19 @@ package com.phamquan;
 
 import org.imgscalr.Scalr;
 
-import java.awt.*;
 import java.io.*;
 import java.util.*;
 import java.awt.image.*;
 
 import javax.imageio.*;
-import javax.imageio.stream.FileImageOutputStream;
 import javax.imageio.stream.ImageOutputStream;
-import javax.swing.*;
 
 
 class Compression {
 
     public static void main (String [] args) {
 
-        compressImage("image.png", "output", ".jpg", 500, 500, 1.0f);
+        compressImage("image.png", "output", ".jpg", 500, 500, 0.8f);
     }
 
     public static void compressImage (String srcPath, String destPath, String format, int with, int height, float quality) {
@@ -48,7 +45,6 @@ class Compression {
             writer.dispose();
 
         } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
